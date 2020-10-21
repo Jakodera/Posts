@@ -4,14 +4,11 @@ import {Provider} from 'react-redux'
 
 import Posts from './Components/Posts';
 import PostsForm from './Components/PostsForm';
-import { applyMiddleware, createStore } from 'redux';
-
-
-const store = createStore(() =>[], {}, applyMiddleware())
+import Store from './Store'
 
 function App() {
   return (
-    <Provider store={store}>
+    <Provider Store={Store}>
     <div className="App">
       <header>
         <PostsForm />
